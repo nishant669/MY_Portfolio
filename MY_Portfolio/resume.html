@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Name | HTML Learning Portfolio</title>
+    <meta name="description" content="Personal portfolio created using HTML only, showing a structured web development learning path.">
+    <meta name="author" content="Student Name">
+    
+    <meta property="og:title" content="Student Name - Web Developer">
+    <meta property="og:description" content="Check out my HTML-only portfolio demonstrating semantic architecture.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute; left:-9999px;" onfocus="this.style.left='0';">Skip to Main Content</a>
+
+<header id="top">
+    <h1>Student Name</h1>
+    <p>Aspiring Web Developer | <em>Built with Semantic HTML</em></p>
+
+    <nav aria-label="Main Navigation">
+        <details open>
+            <summary><strong>Menu</strong></summary>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#learning">Learning Path</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </details>
+    </nav>
+</header>
+
+<hr>
+
+<main id="main-content">
+
+<section id="about">
+    <h2>👋 About Me</h2>
+    <p>
+        I am a student learning web development.  
+        This portfolio is created using <strong>HTML only</strong> to demonstrate
+        my understanding of structure, semantics, and accessibility.
+    </p>
+
+    <blockquote>
+        "Learning to code is learning how to think."
+    </blockquote>
+</section>
+
+<section id="learning">
+    <h2>📚 My Learning Path</h2>
+
+    <ol>
+        <li>
+            <strong>HTML Basics</strong>
+            <p>Document structure, tags, attributes</p>
+        </li>
+        <li>
+            <strong>Text & Formatting</strong>
+            <p>Headings, paragraphs, emphasis, quotations</p>
+        </li>
+        <li>
+            <strong>Lists & Links</strong>
+            <p>Navigation, ordered and unordered lists</p>
+        </li>
+        <li>
+            <strong>Tables</strong>
+            <p>Organizing data using rows and columns</p>
+        </li>
+        <li>
+            <strong>Forms</strong>
+            <p>User input elements and form controls</p>
+        </li>
+        <li>
+            <strong>Media</strong>
+            <p>Images, audio, and video elements</p>
+        </li>
+        <li>
+            <strong>Semantic HTML</strong>
+            <p>header, nav, main, section, article, footer</p>
+        </li>
+    </ol>
+</section>
+
+<section id="skills">
+    <h2>🛠 Technical Skills</h2>
+
+    <ul>
+        <li>HTML5 & Semantics</li>
+        <li>Forms & Validation</li>
+        <li>Accessibility (A11y)</li>
+        <li>Git & Version Control</li>
+    </ul>
+
+    <p>
+        <label for="progress"><strong>Learning Progress:</strong></label><br>
+        <progress id="progress" value="70" max="100">70%</progress>
+    </p>
+</section>
+
+<section id="projects">
+    <h2>💻 Projects</h2>
+
+    <article>
+        <h3>1. Basic HTML Page</h3>
+        <p><strong>Status:</strong> <mark>Completed</mark></p>
+        <p>
+            A simple webpage created to understand headings,
+            paragraphs, links, and images.
+        </p>
+    </article>
+
+    <article>
+        <h3>2. Personal Portfolio</h3>
+        <p><strong>Status:</strong> <mark>Live</mark></p>
+        <p>
+            This portfolio demonstrates structured HTML,
+            semantic elements, and accessibility practices.
+        </p>
+    </article>
+
+    <article>
+        <h3>3. Interactive Dashboard</h3>
+        <p><strong>Status:</strong> <em>Planned</em></p>
+        <p>
+            Styling this portfolio using CSS and adding interactivity
+            using JavaScript.
+        </p>
+    </article>
+</section>
+
+<section id="contact">
+    <h2>📬 Contact Me</h2>
+
+    <address>
+        <p>Email: <a href="mailto:student@example.com">student@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">github.com/username</a></p>
+    </address>
+
+    <hr>
+
+    <h3>Send a Message</h3>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Contact Form</legend>
+
+            <p>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required autocomplete="name">
+            </p>
+
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required autocomplete="email">
+            </p>
+
+            <p>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="40"></textarea>
+            </p>
+
+            <button type="submit">Send Message</button>
+            <button type="reset">Clear</button>
+        </fieldset>
+    </form>
+</section>
+
+</main>
+
+<hr>
+
+<footer>
+    <p>
+        &copy; <time datetime="2026">2026</time> Student Name. 
+        Built with <strong>Semantic HTML5</strong>.
+    </p>
+    <p><a href="#top">Back to Top</a></p>
+</footer>
+
+</body>
+</html>
