@@ -41,9 +41,7 @@
             line-height: 1.6;
         }
 
-        /* --------------------------------------
-           NEW "HELLO WORLD" LOADING SCREEN 
-           -------------------------------------- */
+        /* Loading Screen */
         .loader-wrapper {
             position: fixed;
             top: 0;
@@ -72,20 +70,16 @@
             animation: dropBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
         }
 
-        /* Alternate neon colors for the letters */
         .letter:nth-child(odd) { color: var(--neon-cyan); text-shadow: 0 0 15px var(--neon-cyan); }
         .letter:nth-child(even) { color: var(--neon-purple); text-shadow: 0 0 15px var(--neon-purple); }
-        
-        /* Space character width */
         .letter.space { width: 20px; }
 
-        /* Staggered drop delays */
         .letter:nth-child(1) { animation-delay: 0.1s; }
         .letter:nth-child(2) { animation-delay: 0.2s; }
         .letter:nth-child(3) { animation-delay: 0.3s; }
         .letter:nth-child(4) { animation-delay: 0.4s; }
         .letter:nth-child(5) { animation-delay: 0.5s; }
-        .letter:nth-child(6) { animation-delay: 0.6s; } /* Space */
+        .letter:nth-child(6) { animation-delay: 0.6s; } 
         .letter:nth-child(7) { animation-delay: 0.7s; }
         .letter:nth-child(8) { animation-delay: 0.8s; }
         .letter:nth-child(9) { animation-delay: 0.9s; }
@@ -321,17 +315,8 @@
 
         .scroll-indicator i { font-size: 2rem; color: var(--neon-cyan); }
 
-        /* Section Styles */
-        section {
-            padding: 80px 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        section { padding: 80px 20px; position: relative; z-index: 1; }
+        .container { max-width: 1200px; margin: 0 auto; }
 
         .section-title {
             text-align: center;
@@ -420,30 +405,14 @@
             box-shadow: 0 10px 30px rgba(155, 77, 255, 0.2);
         }
 
-        .skill-card h3 {
-            color: var(--neon-cyan);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-
+        .skill-card h3 { color: var(--neon-cyan); margin-bottom: 20px; font-size: 1.3rem; }
         .skill-item { margin-bottom: 20px; }
         .skill-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
         .skill-name { font-weight: 500; }
         .skill-level { color: var(--neon-purple); font-weight: 600; }
 
-        .skill-bar {
-            height: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
-            border-radius: 10px;
-            animation: fillBar 2s ease;
-        }
+        .skill-bar { height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 10px; overflow: hidden; }
+        .skill-progress { height: 100%; background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan)); border-radius: 10px; animation: fillBar 2s ease; }
 
         @keyframes fillBar { from { width: 0; } }
 
@@ -463,21 +432,15 @@
             position: relative;
         }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(155, 77, 255, 0.3);
-        }
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(155, 77, 255, 0.3); }
+        .project-image { height: 200px; overflow: hidden; position: relative; }
 
-        .project-image {
-            height: 200px;
-            overflow: hidden;
-            position: relative;
-        }
-
+        /* ADDED: object-position: top ensures full-page screenshots show the top dashboard part */
         .project-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top center; 
             transition: transform 0.3s ease;
         }
 
@@ -487,83 +450,43 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background: linear-gradient(to bottom, transparent, rgba(6, 8, 20, 0.9));
-            display: flex;
-            align-items: flex-end;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            display: flex; align-items: flex-end; padding: 20px; opacity: 0; transition: opacity 0.3s ease;
         }
 
         .project-card:hover .project-overlay { opacity: 1; }
 
         .project-links { display: flex; gap: 15px; }
         .project-links a {
-            width: 40px; height: 40px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            color: #fff;
-            transition: all 0.3s ease;
+            width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s ease;
         }
         .project-links a:hover { background: var(--neon-purple); transform: scale(1.1); }
 
         .project-content { padding: 25px; }
-        .project-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--neon-cyan);
-        }
+        .project-title { font-size: 1.3rem; margin-bottom: 10px; color: var(--neon-cyan); }
         .project-description { color: rgba(255, 255, 255, 0.7); margin-bottom: 15px; }
         .project-tech { display: flex; flex-wrap: wrap; gap: 8px; }
         .tech-tag {
-            padding: 5px 12px;
-            background: rgba(155, 77, 255, 0.2);
-            border: 1px solid var(--neon-purple);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: var(--neon-cyan);
+            padding: 5px 12px; background: rgba(155, 77, 255, 0.2); border: 1px solid var(--neon-purple);
+            border-radius: 20px; font-size: 0.85rem; color: var(--neon-cyan);
         }
 
         /* Achievements Section */
-        #achievements {
-            background: linear-gradient(135deg, rgba(6, 8, 20, 1) 0%, rgba(10, 14, 39, 1) 100%);
-        }
-
-        .achievements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-        }
-
+        #achievements { background: linear-gradient(135deg, rgba(6, 8, 20, 1) 0%, rgba(10, 14, 39, 1) 100%); }
+        .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-top: 20px; }
+        
         .achievement-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 35px 25px;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
+            background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px;
+            padding: 35px 25px; text-align: center; transition: all 0.4s ease; position: relative; overflow: hidden; z-index: 1;
         }
 
         .achievement-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 50% 0%, rgba(155, 77, 255, 0.1), transparent 70%);
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.4s ease;
+            z-index: -1; opacity: 0; transition: opacity 0.4s ease;
         }
 
-        .achievement-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(0, 245, 255, 0.5);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 245, 255, 0.1);
-        }
-
+        .achievement-card:hover { transform: translateY(-8px); border-color: rgba(0, 245, 255, 0.5); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 245, 255, 0.1); }
         .achievement-card:hover::before { opacity: 1; }
 
         .achievement-icon { font-size: 3.5rem; margin-bottom: 20px; display: inline-block; }
@@ -987,7 +910,7 @@
                 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="Screenshot 2026-01-11 092519.png" alt="Tourist Application Dashboard" onerror="this.src='https://picsum.photos/seed/project1/400/200'">
+                        <img src="Screenshot 2026-01-11 092519.png" alt="Suraksha Dashboard">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#"><i class="fas fa-eye"></i></a>
@@ -1009,7 +932,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="Screenshot 2026-02-23 214213.jpg" alt="Kaamgar Connect App" onerror="this.src='https://picsum.photos/seed/project2/400/200'">
+                        <img src="Screenshot 2026-02-23 214256.png" alt="Kaamgar Connect Application">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#"><i class="fas fa-eye"></i></a>
@@ -1030,7 +953,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="Screenshot 2026-02-23 213539.png" alt="News Trace Analysis Dashboard" onerror="this.src='https://picsum.photos/seed/project3/400/200'">
+                        <img src="Screenshot 2026-02-23 213539.png" alt="News Trace Analysis Dashboard">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#"><i class="fas fa-eye"></i></a>
@@ -1040,7 +963,7 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">News Trace Analysis</h3>
-                        <p class="project-description">Autonomous Journalist Profiling & Media Trend Analysis Dashboard to track active media topics.</p>
+                        <p class="project-description">Autonomous Journalist Profiling & Media Trend Analysis Dashboard using Python FastAPI and Pandas.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Pandas</span>
