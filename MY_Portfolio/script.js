@@ -377,23 +377,55 @@ function scrollToTop() {
 }
 
 // Contact form submission
+// Contact form submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    console.log('Form submitted:', data);
+    e.preventDefault(); // Prevent default page reload
     
-    const submitBtn = this.querySelector('.submit-btn');
+    const form = this;
+    const submitBtn = form.querySelector('.submit-btn');
     const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Message Sent! ✓';
-    submitBtn.style.background = 'linear-gradient(135deg, #00ff88, #00f5ff)';
     
-    this.reset();
+    // Change button text while sending
+    submitBtn.textContent = 'Sending...';
     
-    setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.style.background = '';
-    }, 3000);
+    // Create form data payload
+    const formData = new FormData(form);
+
+    // Send data to your specific Formspree endpoint
+    fetch("https://formspree.io/f/xjgelaro", {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Success State
+            submitBtn.textContent = 'Message Sent! ✓';
+            submitBtn.style.background = 'linear-gradient(135deg, #00ff88, #00f5ff)';
+            form.reset();
+        } else {
+            // Error State
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    submitBtn.textContent = data["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    submitBtn.textContent = 'Oops! There was a problem.';
+                }
+            })
+        }
+    })
+    .catch(error => {
+        submitBtn.textContent = 'Oops! Network error.';
+    })
+    .finally(() => {
+        // Reset button after 3 seconds
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.style.background = '';
+        }, 3000);
+    });
 });
 
 updateStats();
