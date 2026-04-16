@@ -21,13 +21,9 @@
 
 ---
 
-## ✨ UI / UX Highlights of the Site
+## ✨ Overview
 
-This isn't just a static webpage; it's an interactive experience.
-* **⚛️ Particle Engine:** Custom canvas-based interactive background.
-* **🃏 Gamified Certifications:** An interactive "Card Deck" UI to draw, flip, and reveal certifications dynamically.
-* **⏳ Custom Pre-loader:** Animated "Hello World!" typing intro sequence.
-* **📱 Fully Responsive:** Fluid typography and flex/grid layouts that look perfect from 4K monitors down to mobile screens.
+This portfolio is not just a static webpage; it's a showcase of interactive frontend development combined with modern design principles. It features a custom canvas-based particle engine, an interactive "gamified" certification card deck, and fluid responsive layouts built from scratch without heavy UI frameworks.
 
 ---
 
@@ -82,20 +78,13 @@ I actively participate in competitive coding challenges to sharpen my algorithmi
 
 ---
 
-## 📸 Portfolio Preview
-*(To make your README look perfect, record a quick 5-second GIF of your website's animations (like the card deck or particle canvas) and drag-and-drop it right here!)*
-
-> `[Drop your portfolio.gif here]`
-
----
-
 ## 💻 Local Setup
 
 Want to run this portfolio locally to check out the code? 
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/nishant669/MY_Portfolio](https://github.com/nishant669/MY_Portfolio)
+git clone [https://github.com/nishant669/MY_Portfolio.git](https://github.com/nishant669/MY_Portfolio.git)
 
 # 2. Navigate into the directory
 cd MY_Portfolio
