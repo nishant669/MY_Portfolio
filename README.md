@@ -95,10 +95,10 @@ Want to run this portfolio locally to check out the code?
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/nishant669/YOUR_REPO_NAME.git](https://github.com/nishant669/YOUR_REPO_NAME.git)
+git clone [https://github.com/nishant669/MY_Portfolio](https://github.com/nishant669/MY_Portfolio)
 
 # 2. Navigate into the directory
-cd YOUR_REPO_NAME
+cd MY_Portfolio
 
 # 3. Open index.html in your favorite browser!
 # (Or use an extension like VS Code Live Server for the best experience)
